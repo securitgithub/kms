@@ -1,3 +1,20 @@
 <script>
-  window.location.href="http://fondoger.cnblogs.com/"
+  let fullUrl = document.location.toString();
+  let arrUrl = fullUrl.split("//");
+
+  let segments = arrUrl[1].split("/");
+
+  let subLocations = {
+    "resume": "https://google.com/",
+    "cet4": "https://google.com/",
+    "cet6": "https://google.com/",
+    "CCF-201809": "https://google.com/",
+    "CCF-201812": "https://google.com/",
+  }
+
+  if (segments.length > 1 && subLocations[segments[1]]) {
+    window.location.href = subLocations[segments[1]];
+  } else {
+    window.location.href="http://fondoger.cnblogs.com/"
+  }
 </script>
