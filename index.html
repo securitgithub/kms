@@ -1,8 +1,7 @@
 <script>
   let fullUrl = document.location.toString();
-  let arrUrl = fullUrl.split("//");
-
-  let segments = arrUrl[1].split("/");
+ 
+  let segments = fullUrl.split("?");
 
   let subLocations = {
     "resume": "https://google.com/",
